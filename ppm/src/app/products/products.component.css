@@ -1,0 +1,30 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.displayProduct {
+    width: 100%;
+    margin-top: 20px;
+    padding: 15px 20px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+
+.showDetails {
+    border: 2px solid gold;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 0 5px;
+}
+
+.box {
+    margin: 10px 0;
+    padding: 0;
+    text-align: center;
+}
+
+.box img {
+    margin: 0 auto;
+}

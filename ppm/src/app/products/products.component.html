@@ -1,0 +1,21 @@
+<router-outlet></router-outlet>
+<div class='container' *ngIf='_httpService.products'>
+    <div class='displayProduct'>
+        <div class='flash' *ngIf='flashMsg'><p *ngFor='let msg of flashMsg.messages' class='{{ flashMsg.type }}'>{{ msg }}</p></div>
+        <h4 class='text-center'>Products List</h4>
+        <div class='row'>
+            <div class='box col col-lg-3 col-md-4 col-sm-6' *ngFor='let product of _httpService.products'>
+                <img src='{{ product.url }}' alt='no pic' width='80' />
+                <h6>{{ product.title }}</h6>
+                <h6>{{ product.price | currency }}</h6>
+                <div>
+                    <button class='btn btn-sm btn-warning mx-1' [routerLink]='["/products/edit", product._id]'>Edit</button>
+                    <button class='btn btn-sm btn-danger mx-1' (click)='deleteProduct(product._id)'>Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
